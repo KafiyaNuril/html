@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #show {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="">Status Ayah</label>
+        <div>
+            <label for="">Masih Hidup</label>
+            <input type="radio" name="tipe" id="" value="hidup" onclick="showHide(this)">
+        </div>
+        <div>
+            <label for="">Meninggal</label>
+            <input type="radio" name="tipe" id="" value="meninggal" onclick="showHide(this)">
+        </div>
+        <div>
+            <label for="">Tidak Diketahui</label>
+            <input type="radio" name="tipe" id="" value="tidak" onclick="showHide(this)">
+        </div>
+        <br>
+        <div id="show">
+            <div>
+                <label for="" id="">Pendidikan Ayah</label>
+                <br>
+                <select name="" id="">
+                    <option selected disabled>Pilih</option>
+                    <option value="SD">SD</option>
+                    <option value="SMP">SMP</option>
+                    <option value="SMA">SMA</option>
+                    <option value="D1">D1</option>
+                    <option value="D2">D2</option>
+                    <option value="D3">D3</option>
+                    <option value="S1">S1</option>
+                    <option value="S2">S2</option>
+                    <option value="S3">S3</option>
+            
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="" id="">Pekerjaan Ayah</label>
+                <br>
+                <select name="" id="">
+                    <option selected disabled>Pilih</option>
+                    <option value="Pegawai Negeri Sipil">Pegawai Negeri Sipil</option>
+                    <option value="Pegawai Swasta">Pegawai Swasta</option>
+                    <option value="Wirausaha">Wirausaha</option>
+                    <option value="Petani">Petani</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="" id="">Deskripsi Pekerjaan Ayah</label>
+                <br>
+                <input type="text" name="" id="" placeholder="tuliskan nama spesifikasi pekerjaan">
+            </div>
+            <br>
+            <div>
+                <label for="" id=""> Total Penghasilan Ayah per Bulan</label>
+                <br>
+                <input type="number" name="" id=""><br>
+                <b>bila tidak memiliki penghasilan tulis "0"</b>
+            </div>
+            <br>
+            <div>
+                <label for="" id="ubah">Detail Ayah bekerja, berapa lama sudah bekerja, kondisi kesehatan, dan kondisi karir profesinya</label>
+                <br>
+                <input type="text" name="" id="">
+            </div>
+        </div>
+    </form>
+    <script>
+        function showHide(e){
+            // let show = document.getElementById("show");
+            if (e.value == "hidup") {
+                document.getElementById("show").style.display = "block";
+            }else if (e.value == "meninggal") {
+                document.getElementById("ubah").innerText = "Detail Pekerjaan Ayah Semasa Hidup";
+                document.getElementById("show").style.display = "block";
+            } else {
+                document.getElementById("show").style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

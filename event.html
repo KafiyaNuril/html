@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="">Pilih Kategori</label>
+        <div>
+            <label for="">Peserta</label>
+            <input type="radio" name="tipe" id="" value="Peserta" onclick="changeLabel(this)">
+        </div>
+        <div>
+            <label for="">Perekomendasi</label>
+            <input type="radio" name="tipe" id="" value="Perekomendasi" onclick="changeLabel(this)">
+        </div>
+        <div>
+            <label for="" id="text">Wilayah Kerja</label>
+            <input type="text" name="" id="">
+        </div>
+    </form>
+
+    <script>
+        function changeLabel(e) {
+            if (e.value == "Peserta") {
+                document.getElementById("text").innerText = 'Wilayah Kerja';
+            } else {
+                document.getElementById("text").innerText = 'Unit Kerja';
+            }
+        }
+    </script>
+</body>
+
+</html>

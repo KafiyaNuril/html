@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10%;
+            flex-direction: column;
+        }
+
+        button {
+            background-color: #12ab64;
+            color: white;
+            border: none;
+            width: 200px;
+            height: 40px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hitung Mundur</h1>
+
+    <h1 id="hitungMundur">10</h1>
+
+    <button onclick="mulai()">Mulai</button>
+    <button onclick="berhenti()">Berhenti</button>
+
+    <script>
+        var downloadTimer;
+
+        function mulai() {
+            var timeleft = 10;
+            var hitungMundurElement = document.getElementById("hitungMundur");
+            
+            hitungMundurElement.style.color = "black"; 
+            hitungMundurElement.textContent = timeleft;
+
+            downloadTimer = setInterval(function() {
+                timeleft--;
+                document.getElementById("hitungMundur").textContent = timeleft;
+
+                if (timeleft <= 0) {
+                    clearInterval(downloadTimer);
+                    var waktuHabis = document.getElementById("hitungMundur");
+                    waktuHabis.textContent = "Waktu Habis";
+                    waktuHabis.style.color = "red";
+                }
+            }, 1000);
+        }
+
+        function berhenti() {
+            clearInterval(downloadTimer);
+        }
+    </script>
+</body>
+</html>

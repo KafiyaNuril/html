@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opacity Option</title>
+    <style>
+        img {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <img id="display" src="🎀.jpeg" alt="Selected Image"><br>
+
+    <label for="">Ubah Gambar:</label>
+    <select id="changeImage">
+        <option selected disabled>Pilih Gambar</option>
+        <option value="🎀.jpeg">Gambar 1</option>
+        <option value="bunnies unite💞.jpeg">Gambar 2</option>
+        <option value="f91321b26416eec5a31a8d0c4bfba0c5.jpg">Gambar 3</option>
+    </select>
+
+    <select id="changeOpacity">
+        <option selected disabled>Pilih Opacity</option>
+        <option value="1">1</option>
+        <option value="0.5">0.5</option>
+        <option value="0.2">0.2</option>
+    </select>
+
+    <button onclick="submit()">Kirim</button>
+
+    <script>
+        function submit() {
+            const imageElement = document.getElementById("display");
+            const changeImage = document.getElementById("changeImage");
+            const changeOpacity = document.getElementById("changeOpacity");
+
+            const selectedImage = changeImage.value;
+            imageElement.src = selectedImage;
+
+            const selectedOpacity = changeOpacity.value;
+                imageElement.style.opacity = selectedOpacity;
+        }
+    </script>
+</body>
+</html>

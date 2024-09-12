@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button toggle</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        label {
+            display: flex;
+            justify-content: center;
+        }
+
+        h1 {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .toggle {
+            width: 60px;
+            height: 30px;
+            background-color: #1969bf;
+            border-radius: 30px;
+            position: relative;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .toggle .toggleCircle {
+            width: 26px;
+            height: 26px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            transition: left 0.4s;
+        }
+
+        input {
+            display: none;
+        }
+
+        input:checked + .toggle {
+            background-color: #86bcf3;
+        }
+
+        input:checked + .toggle .toggleCircle {
+            left: 32px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Button Toggle</h1>
+    <form action="">
+        <label>
+            <input type="checkbox">
+            <div class="toggle">
+                <div class="toggleCircle"></div>
+            </div>
+        </label><br>
+    </form>
+</body>
+</html>

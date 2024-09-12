@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Tanggal Display</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="date" id="inputData">
+        <button id="kirim">Submit</button>
+        <p id="result"><!--<p onclick="search()">-->Tidak mencari data...</p>
+    </div>
+
+    <script>
+        /*function search() {
+            const input = document.getElementById("inputData").value;
+            const result = document.getElementById("result");
+
+            result.textContent = input ? `Mencari data tanggal ${input}` : "Tidak mencari data";
+            // result.style.color = "blue";
+        }*/
+
+        document.getElementById("kirim").addEventListener("click", 
+        function(){
+            const input = document.getElementById("inputData").value;
+            const result = document.getElementById("result");
+
+            result.textContent = input ? `Mencari data tanggal ${input}` : "Tidak mencari data";
+            input.style.color = "blue";
+        })
+    </script>
+
+</body>
+</html>

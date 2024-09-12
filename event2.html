@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="">Pilih Kategori</label>
+        <div>
+            <label for="">Ya</label>
+            <input type="radio" name="tipe" id="" value="Ya" onclick="showHide(this)">
+        </div>
+        <div>
+            <label for="">Tidak</label>
+            <input type="radio" name="tipe" id="" value="Tidak" onclick="showHide(this)">
+        </div>
+        <div id="wrap">
+            <div>
+                <label for="" id="text">Nama Penyakit</label>
+                <input type="text" name="" id="">
+            </div>
+            <div>
+                <label for="" id="text">Status Penyakit</label>
+                <input type="text" name="" id="">
+            </div>
+        </div>
+    </form>
+    <script>
+        function showHide(e) {
+            if (e.value == "Ya") {
+                document.getElementById("wrap").style.display = "block";
+            } else {
+                document.getElementById("wrap").style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
